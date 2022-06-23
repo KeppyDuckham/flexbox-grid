@@ -12,39 +12,40 @@ body {
     min-height: 100vh;
 }
 
-main {
+#grid-container{
     display: grid;
-     grid-template-areas: 
-    'a a a b'
-    'c c d d'
-    ;
-    gap: 10px;
-    width: 100%;
-    margin: auto;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 4em;
+    grid-template-rows: repeat(6, 1fr);
+    gap:10px;
 }
 
-main div {
-    padding: 2em;
-    height: 200px;
-    border-radius: 5px;
+.grid-item{
+    padding: 2.5em;
 }
 
 .red {
     background-color: red;
-    grid-area: a;
+    grid-area: 1/1/4/4;
 }
 
 .orange {
     background-color: orange;
-    grid-area: b;
+    grid-area: 1/4/4/6;
 }
 
 .green { 
     background-color: green;
-    grid-area: c;
+    grid-area: 4/1/7/3;
 }
 
 .cyan {
     background-color: cyan;
-    grid-area: d;
+    grid-area: 4/3/5/6;
+}
+
+.cyan2 {
+    background-color: cyan;
+    grid-area: 5/3/7/6;
 }
