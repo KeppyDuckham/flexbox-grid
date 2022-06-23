@@ -12,40 +12,51 @@ body {
     min-height: 100vh;
 }
 
+.container {
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #grid-container{
     display: grid;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 4em;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    'a a a b b'
+    'a a a b b'
+    'c c d d d'
+    'c c e e e';
+    margin: auto;
+    padding: 2em 0;
     gap:10px;
+    width: 80%;
 }
 
 .grid-item{
-    padding: 2.5em;
+    padding: 5em;
 }
 
 .red {
     background-color: red;
-    grid-area: 1/1/4/4;
+    grid-area: a;
 }
 
 .orange {
     background-color: orange;
-    grid-area: 1/4/4/6;
+    grid-area: b;
 }
 
 .green { 
     background-color: green;
-    grid-area: 4/1/7/3;
+    grid-area: c;
 }
 
 .cyan {
     background-color: cyan;
-    grid-area: 4/3/5/6;
+    grid-area: d;
 }
 
 .cyan2 {
     background-color: cyan;
-    grid-area: 5/3/7/6;
+    grid-area: e;
 }
